@@ -2,6 +2,9 @@ public class Main{
     public static void main(String[] args) {
         Account account = new Account("123-123456", 50000);
 
-        account.deposit(324); // deposit test
+        account.withdraw(324); // withdraw test
+
+        int getBalance_test = account.getBalance();
+        System.out.println(getBalance_test);
     }
 }
