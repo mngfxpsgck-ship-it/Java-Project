@@ -1,10 +1,9 @@
 public class Main{
     public static void main(String[] args) {
         Account account = new Account("123-123456", 50000);
+        Transaction transaction = new Transaction();
+        Manager manager = new Manager();
 
-        account.withdraw(324); // withdraw test
-
-        int getBalance_test = account.getBalance();
-        System.out.println(getBalance_test);
+        transaction.test(manager);
     }
 }
