@@ -49,7 +49,7 @@ public class Account{
         return -9;  //  에러시 -9 반환.
     }
 
-    public int getBalance(){
+    public int getBalance() {
         return balance;
     }
 
