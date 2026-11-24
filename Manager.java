@@ -20,4 +20,6 @@ public class Manager{
             return;
         }  // 입금 금액이 0 아래면 그냥 return
     }
+
+    // TODO : 출금하면 장부 만들기 추가예정
 }

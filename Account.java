@@ -16,8 +16,10 @@ public class Account{
         if(money > 0){
             balance += money;
 
+            System.out.println("--------------[입금]--------------");
             System.out.println("[계좌] " + accountNumber + ": " + money + "원이 입금 됐습니다.");
             System.out.println("[계좌] " + accountNumber + ": " + balance + "원.");
+            System.out.println("----------------------------------");
 
             return 0;  // 입금 금액 0 초과시 0 반환
         }
@@ -34,8 +36,10 @@ public class Account{
         if(balance >= money){
             balance -= money;
 
+            System.out.println("--------------[출금]--------------");
             System.out.println(money + "원이 인출 됐습니다.");
             System.out.println("[계좌] " + accountNumber + ": " + balance + "원.");
+            System.out.println("----------------------------------");
 
             return 0;  // 잔액이 출금 금액보다 많으면 0 반환.
         }
