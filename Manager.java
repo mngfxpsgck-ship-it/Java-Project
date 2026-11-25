@@ -9,7 +9,7 @@ public class Manager{
         int runDeposit = account.deposit(amount);  // deposit 실행 후 리턴값 저장
 
         if(runDeposit == 0){
-            ledger.add(category + ": " + amount + "원");
+            ledger.add(category + ": " + "+" + amount + "원");
 
             System.out.println("--------------[장부]--------------");
             System.out.println(String.join("\n", ledger));
@@ -21,5 +21,18 @@ public class Manager{
         }  // 입금 금액이 0 아래면 그냥 return
     }
 
-    // TODO : 출금하면 장부 만들기 추가예정
+    public void recordExpense(String category, int amount, Account account){
+        int runWithdraw = account.withdraw(amount);
+
+        if(runWithdraw == 0){
+            ledger.add(category + ": " + "-" + amount + "원");
+
+            System.out.println("--------------[장부]--------------");
+            System.out.println(String.join("\n", ledger));
+            System.out.println("----------------------------------\n\n");
+        }  // 출금 금액이 0 이상이면 영수증 추가
+
+        else if(runWithdraw == -1){
+        }  // 출금 금액이 0 아래면 종료
+    }
 }
