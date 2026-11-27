@@ -6,5 +6,7 @@ public class Main{
         manager.recordIncome("음식", 5, account);
         manager.recordIncome("기타", 10, account);
         manager.recordExpense("운동", 50, account);
+
+        manager.printLedger();
     }
 }

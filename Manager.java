@@ -11,9 +11,6 @@ public class Manager{
         if(runDeposit == 0){
             ledger.add(category + ": " + "+" + amount + "원");
 
-            System.out.println("--------------[장부]--------------");
-            System.out.println(String.join("\n", ledger));
-            System.out.println("----------------------------------\n\n");
         }  // 입금 금액이 0 이상이면 영수증 추가
 
         else if (runDeposit == -1){
@@ -27,12 +24,15 @@ public class Manager{
         if(runWithdraw == 0){
             ledger.add(category + ": " + "-" + amount + "원");
 
-            System.out.println("--------------[장부]--------------");
-            System.out.println(String.join("\n", ledger));
-            System.out.println("----------------------------------\n\n");
         }  // 출금 금액이 0 이상이면 영수증 추가
 
         else if(runWithdraw == -1){
         }  // 출금 금액이 0 아래면 종료
+    }
+
+    public  void printLedger(){
+        System.out.println("--------------[장부]--------------");
+        System.out.println(String.join("\n", ledger));
+        System.out.println("----------------------------------\n\n");
     }
 }

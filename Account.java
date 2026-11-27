@@ -14,7 +14,7 @@ public class Account{
 
     public int deposit(int money){
         if(money > 0){
-            balance += money;
+            balance += money;           // TODO : 입금시 어떤 카테고리에 입금하는지 출력하는 거 만들기
 
             System.out.println("--------------[입금]--------------");
             System.out.println("[계좌] " + accountNumber + ": " + money + "원이 입금 됐습니다.");
